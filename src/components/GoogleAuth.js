@@ -28,11 +28,21 @@ class GoogleAuth extends Component {
   renderButton(){
     const {isSignedIn} = this.state;
     if(isSignedIn === null){
-      return(<div>I don't know if we are signed in</div>);
+      return null;
     }else if(isSignedIn){
-      return<div>I am signed in!</div>
+      return (
+        <button className="ui red google button">
+          <i className="google icon" />
+          Sign Out 
+        </button>
+      );
     }else{
-      return <div>I am not signed in</div>
+      return (
+     <button className="ui red google button">
+       <i className="google icon" />
+       Sign In with Google
+     </button>
+      );
     }
   }
   render() {
