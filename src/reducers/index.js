@@ -1,5 +1,6 @@
 import {combineReducers} from 'redux';
+import authReducer from './authReducer';
 
 export default combineReducers({
-    temp: () => "I will be replaced later I am here to avoid errors"
-})
+    auth: authReducer
+});
